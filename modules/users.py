@@ -1,10 +1,8 @@
-# Imports views
 from app.index import index
 from pyspark.sql.functions import col
 from pyspark.sql.functions import col, substr
 from pyspark.sql.functions import substring
 
-# Function attributes
 spark, url, properties, conn, cur, conn_admin, cur_admin = index()
 
 users = spark.read.csv("/home/linux-adrian/Documents/pyspark/system/public/dev/pmol/python.csv", header=True, inferSchema=True)
